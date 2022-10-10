@@ -13,7 +13,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 class HelloView(APIView):
-    #@method_decorator(cache_page(5 * 60))
+    @method_decorator(cache_page(5 * 60))
     def get(self, request):
         try:
             logger.info('Calling httpbin')
